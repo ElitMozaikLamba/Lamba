@@ -3,41 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elit Mozaik Lamba</title>
+    <meta name="description" content="Handcrafted Turkish mosaic lamps - Elit Mozaik Lamba. Wholesale and retail of authentic mosaic lamps.">
+    <title>Elit Mozaik Lamba | Handmade Turkish Mosaic Lamps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #8B5A2B;
+            --secondary-color: #D4AF37;
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+            --dark-bg: #1a1a1a;
+            --transition: all 0.3s ease;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: #fff;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            line-height: 1.6;
         }
 
         header {
             background: url('https://i.postimg.cc/qqXpzMc1/Mosaic-Background.jpg') no-repeat center/cover;
-            padding: 20px;
+            padding: 30px 20px;
             color: white;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--secondary-color);
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
+
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
         }
 
         main {
-            padding: 20px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -45,7 +102,7 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
+            gap: 25px;
             justify-content: center;
         }
 
@@ -55,11 +112,12 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             cursor: pointer;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .product:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .product img {
@@ -67,12 +125,18 @@
             height: 300px;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
+            transition: var(--transition);
+        }
+
+        .product:hover img {
+            opacity: 0.9;
         }
 
         .product p {
             padding: 15px;
             margin: 0;
-            font-weight: bold;
+            font-weight: 500;
+            color: var(--primary-color);
         }
 
         .popup {
@@ -90,12 +154,20 @@
             color: white;
             text-align: center;
             z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup.active {
+            display: flex;
+            opacity: 1;
         }
 
         .popup img {
             max-width: 80vw;
             max-height: 70vh;
             border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
         }
 
         .popup .description {
@@ -105,6 +177,7 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 15px 20px;
             border-radius: 8px;
+            line-height: 1.6;
         }
 
         .popup .close {
@@ -114,14 +187,31 @@
             font-size: 40px;
             color: white;
             cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .popup .close:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
         }
 
         .section {
             padding: 40px;
             background: white;
-            margin: 20px 0;
+            margin: 40px 0;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section p {
+            margin-bottom: 20px;
+        }
+
+        .section strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
         .contact-form {
@@ -136,62 +226,93 @@
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.2);
         }
 
         .form-group textarea {
             height: 150px;
+            resize: vertical;
         }
 
         .submit-btn {
-            background-color: #8B5A2B;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 14px 30px;
             font-size: 1rem;
+            font-weight: 500;
             border-radius: 4px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 10px;
         }
 
         .submit-btn:hover {
             background-color: #6d4722;
+            transform: translateY(-2px);
         }
 
         footer {
             background: url('https://i.postimg.cc/qqXpzMc1/Mosaic-Background.jpg') no-repeat center/cover;
-            padding: 20px;
+            padding: 30px 20px;
             color: white;
             text-align: center;
+            margin-top: 40px;
         }
 
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 20px;
-            }
+        .contact-info {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        /* Form submission messages */
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
         .form-message {
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
             display: none;
+            text-align: center;
         }
 
         .form-message.success {
@@ -204,6 +325,37 @@
             background-color: #f8d7da;
             color: #721c24;
             display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .popup img {
+                max-width: 95vw;
+            }
+
+            .popup .description {
+                max-width: 90%;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -220,80 +372,93 @@
         </nav>
     </header>
 
-  <main>
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="gallery" id="gallery-container">
-            <!-- Gallery will be populated by JavaScript -->
-        </div>
-    </section>
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="gallery" id="gallery-container">
+                <!-- Gallery will be populated by JavaScript -->
+            </div>
+        </section>
 
-    <div class="section" id="about">
-        <h2>About Us | Hakkımızda</h2>
-        <p><strong>English:</strong> Elit Mozaik Lamba brings centuries-old Turkish mosaic craftsmanship to the modern world. Each lamp is 100% handmade, created with passion and precision.</p>
-        <p><strong>Türkçe:</strong> Elit Mozaik Lamba, yüzyıllara dayanan Türk mozaik sanatını günümüze taşıyor. Her lamba %100 el yapımı olup, tutku ve özenle üretilmektedir.</p>
-    </div> <!-- This closing div was missing -->
-
-    <div class="section" id="contact">
-        <h2>Contact Us | İletişim</h2>
-
-        <div class="contact-form">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact">
-                <p class="hidden">
-                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                </p>
-
-                <div class="form-group">
-                    <label for="name">Name / İsim:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email / E-posta:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone / Telefon:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message / Mesaj:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="interest">I'm interested in / İlgi alanım:</label>
-                    <select id="interest" name="interest">
-                        <option value="wholesale">Wholesale / Toptan satış</option>
-                        <option value="retail">Retail / Perakende satış</option>
-                        <option value="custom">Custom order / Özel sipariş</option>
-                        <option value="other">Other / Diğer</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="submit-btn">Send / Gönder</button>
-            </form>
+        <div class="section" id="about">
+            <h2>About Us | Hakkımızda</h2>
+            <p><strong>English:</strong> Elit Mozaik Lamba brings centuries-old Turkish mosaic craftsmanship to the modern world. Each lamp is 100% handmade, created with passion and precision by skilled artisans.</p>
+            <p><strong>Türkçe:</strong> Elit Mozaik Lamba, yüzyıllara dayanan Türk mozaik sanatını günümüze taşıyor. Usta eller tarafından tutku ve özenle üretilen her lamba %100 el yapımıdır.</p>
         </div>
 
-        <div style="margin-top: 30px;">
-            <p><strong>Direct Contact / Direkt İletişim:</strong></p>
-            <p>WhatsApp: <a href="https://wa.me/905388558257" style="color: #8B5A2B; font-weight: bold;">+90 538 855 8257</a></p>
-            <p>Phone / Telefon: <strong>0538 855 8257</strong></p>
+        <div class="section" id="contact">
+            <h2>Contact Us | İletişim</h2>
+
+            <div id="form-messages" class="form-message"></div>
+
+            <div class="contact-form">
+                <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+
+                    <div class="form-group">
+                        <label for="name">Name / İsim:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email / E-posta:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone / Telefon:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message / Mesaj:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">I'm interested in / İlgi alanım:</label>
+                        <select id="interest" name="interest">
+                            <option value="wholesale">Wholesale / Toptan satış</option>
+                            <option value="retail">Retail / Perakende satış</option>
+                            <option value="custom">Custom order / Özel sipariş</option>
+                            <option value="other">Other / Diğer</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send / Gönder</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <a href="https://wa.me/905388558257">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-6.29 3.617c-.545 1.514-1.733 2.766-3.14 2.982-1.015.156-1.934-.227-2.716-1.045-.173-.174-.545-.521-.545-.521s1.263-1.119.794-3.808c-.389-2.288-1.896-3.754-1.896-3.754s-.521.174-1.434.744c-.653.412-1.076.925-1.076 1.83 0 .909.406 1.467.744 1.895.297.397.594.694.644.744.173.173.396.347.644.347.198 0 .322-.074.446-.149.124-.074.595-.52.818-.694.223-.174.347-.124.595-.074.248.05 1.607.693 1.883.818.277.124.421.186.471.285.05.099.05.558-.124 1.102"/>
+                    </svg>
+                    WhatsApp: +90 538 855 8257
+                </a>
+                <a href="tel:+905388558257">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                        <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"/>
+                    </svg>
+                    Call: 0538 855 8257
+                </a>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
     <div class="popup" id="popup">
         <span class="close" onclick="closePopup()">&times;</span>
-        <img id="popupImg" src="" alt="Mosaic Lamp">
+        <img id="popupImg" src="" alt="Mosaic Lamp" loading="lazy">
         <div class="description" id="popupDesc"></div>
     </div>
 
     <footer>
         <p>&copy; 2025 Elit Mozaik Lamba | All Rights Reserved</p>
+        <p>Handcrafted with passion in Turkey</p>
     </footer>
 
     <script>
@@ -323,7 +488,7 @@
             const productElement = document.createElement('div');
             productElement.className = 'product';
             productElement.innerHTML = `
-                <img src="${product.src}" alt="Mosaic Lamp ${index + 1}">
+                <img src="${product.src}" alt="Mosaic Lamp ${index + 1}" loading="lazy">
                 <p>Mosaic Lamp ${index + 1}</p>
             `;
             productElement.addEventListener('click', () => openPopup(
@@ -342,12 +507,12 @@
             popupImg.src = imageSrc;
             popupImg.alt = "Mosaic Lamp";
             popupDesc.textContent = description;
-            popup.style.display = 'flex';
+            popup.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closePopup() {
-            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup').classList.remove('active');
             document.body.style.overflow = '';
         }
 
@@ -367,24 +532,56 @@
 
         // Handle form submission
         document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const submitStatus = urlParams.get('submit');
+            const form = document.getElementById('contact-form');
+            const messageDiv = document.getElementById('form-messages');
 
-            if (submitStatus === 'success') {
-                const messageDiv = document.getElementById('form-messages');
-                messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
-                messageDiv.classList.add('success');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
 
-                // Clear the form
-                document.getElementById('contact-form').reset();
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
 
-                // Scroll to the form
-                setTimeout(() => {
-                    window.location.hash = '#contact';
-                }, 100);
+                    try {
+                        const formData = new FormData(form);
+
+                        // For Netlify Forms
+                        await fetch('/', {
+                            method: 'POST',
+                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                            body: new URLSearchParams(formData).toString()
+                        });
+
+                        // Show success message
+                        messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
+                        messageDiv.classList.add('success');
+                        form.reset();
+
+                        // Scroll to message
+                        setTimeout(() => {
+                            messageDiv.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    } catch (error) {
+                        messageDiv.textContent = 'Error sending message. Please try again or contact us directly.';
+                        messageDiv.classList.add('error');
+                        console.error('Form submission error:', error);
+                    } finally {
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                });
             }
 
-            // You can add more error handling here if needed
+            // Check for success message in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('form-submitted')) {
+                messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
+                messageDiv.classList.add('success');
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
         });
     </script>
 </body>
