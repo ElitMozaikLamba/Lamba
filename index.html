@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elit Mozaik Lamba</title>
     <style>
-        /* General Page Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +13,6 @@
             background-color: #f4f4f4;
         }
 
-        /* HEADER SECTION - Reduced Height */
         header {
             background: url('https://i.postimg.cc/wMZWp6JB/Mosaic-Art.jpg') no-repeat center/cover;
             padding: 20px;
@@ -24,7 +22,6 @@
             z-index: 1000;
         }
 
-        /* Navigation Bar */
         nav ul {
             list-style: none;
             padding: 0;
@@ -39,12 +36,10 @@
             font-weight: bold;
         }
 
-        /* Main Content */
         main {
             padding: 20px;
         }
 
-        /* PRODUCT GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -52,7 +47,6 @@
             justify-content: center;
         }
 
-        /* Individual Product Boxes */
         .product {
             width: 300px;
             margin: 10px;
@@ -63,14 +57,12 @@
             cursor: pointer;
         }
 
-        /* Image Styling */
         .product img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
 
-        /* Popup Modal */
         .popup {
             display: none;
             position: fixed;
@@ -111,31 +103,45 @@
             color: white;
             cursor: pointer;
         }
+
+        .section {
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Elit Mozaik Lamba</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+       <nav>
+    <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
     </header>
 
-    <main id="products">
-        <h2>Our Products</h2>
+    <main>
+        <h2 id="products">Our Products</h2>
         <div class="gallery">
             <script>
                 let images = [
                     { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
-                    { src: "https://i.postimg.cc/g2dV6XYW/LAMBA-10.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
-                    { src: "https://i.postimg.cc/ncqKzYf2/LAMBA-11.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
-                    { src: "https://i.postimg.cc/W410XBFY/LAMBA-12.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
                     { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
                     { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
                     { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
@@ -160,6 +166,27 @@
                 });
             </script>
         </div>
+
+        <div class="section" id="about">
+            <h2>About Us | Hakkımızda</h2>
+            <p><strong>English:</strong> Elit Mozaik Lamba brings centuries-old Turkish mosaic craftsmanship to the modern world. Each lamp is 100% handmade, created with passion and precision. Our designs blend tradition with innovation to illuminate your space with beauty and cultural heritage.</p>
+            <p><strong>Türkçe:</strong> Elit Mozaik Lamba, yüzyıllara dayanan Türk mozaik sanatını günümüze taşıyor. Her lamba %100 el yapımı olup, tutku ve özenle üretilmektedir. Tasarımlarımız, geleneği yenilikle harmanlayarak mekanınıza estetik ve kültürel miras katıyor.</p>
+        </div>
+
+       <div class="section" id="contact">
+    <h2>Contact Us | İletişim</h2>
+
+    <p><strong>English:</strong>
+    At Elit Mozaik Lamba, we craft and distribute handmade mosaic lamps that bring timeless Turkish artistry to the world. Whether you're looking for wholesale or retail options, we ensure each lamp is made with passion and expertise. If you’re interested in purchasing, collaborating, or learning more, feel free to get in touch. We provide manufacturing, distribution, and export services, guaranteeing quality in every product.</p>
+
+    <p>Contact us via DM or call: <strong>05388558257</strong>. We look forward to helping you find the perfect handmade lamp for your space.</p>
+
+    <p><strong>Türkçe:</strong>
+    Elit Mozaik Lamba olarak, geleneksel Türk mozaik sanatını yaşatarak el yapımı lambalar üretiyor ve dağıtıyoruz. Toptan ve perakende satış seçeneklerimizle, her ürünü en yüksek kalite ve ustalıkla sunuyoruz. Sipariş vermek, iş birliği yapmak veya detaylı bilgi almak için bizimle iletişime geçebilirsiniz. Üretim, dağıtım ve ihracat alanlarında hizmet vererek, her müşterimize en iyi deneyimi sunmayı hedefliyoruz.</p>
+
+    <p>DM veya doğrudan şu numaradan ulaşabilirsiniz: <strong>05388558257</strong>. Eşsiz mozaik lambalarımızı sizinle buluşturmak için sabırsızlanıyoruz.</p>
+</div>
+
     </main>
 
     <div class="popup" id="popup">
@@ -180,11 +207,7 @@
         }
 
         function closePopup() {
-            const popup = document.getElementById('popup');
-            const popupImg = document.getElementById('popupImg');
-
-            popup.style.display = 'none';
-            popupImg.src = "";
+            document.getElementById('popup').style.display = 'none';
         }
 
         document.addEventListener("keydown", function(event) {
