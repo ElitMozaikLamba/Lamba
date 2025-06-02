@@ -1,114 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- All your existing head content remains the same -->
-    <!-- ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elit Mozaik Lamba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        header {
+            background: url('https://i.postimg.cc/qqXpzMc1/Mosaic-Background.jpg') no-repeat center/cover;
+            padding: 20px;
+            color: clear;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .product {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            z-index: 1001;
+        }
+
+        .popup img {
+            max-width: 80vw;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+
+        .popup .description {
+            margin-top: 10px;
+            font-size: 18px;
+            max-width: 70%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <!-- All your existing header and main content remains the same until the contact form -->
-    <!-- ... -->
 
-    <div class="section" id="contact">
-        <h2>Contact Us | İletişim</h2>
-        <div id="form-messages" class="form-message"></div>
-        <div class="contact-form">
-            <!-- Modified form without Netlify attributes -->
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name / İsim:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+    <header>
+        <h1>Elit Mozaik Lamba</h1>
+       <nav>
+    <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-                <div class="form-group">
-                    <label for="email">Email / E-posta:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+    </header>
 
-                <div class="form-group">
-                    <label for="phone">Phone / Telefon:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
+    <main>
+        <h2 id="products">Our Products</h2>
+        <div class="gallery">
+            <script>
+                let images = [
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/g2dV6XYW/LAMBA-10.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/ncqKzYf2/LAMBA-11.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/W410XBFY/LAMBA-12.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/LsQL7xj9/LAMBA-13.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/nzsBtq1v/LAMBA-14.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/3RPprWLz/LAMBA-15.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/SRC9nq3R/LAMBA-16.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/dtcdzkZy/LAMBA-17.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/YCpFC532/LAMBA-19.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/KYW3QRy4/LAMBA-23.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/vTFgFkTs/LAMBA-25.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/mkyDxrKY/LAMBA-36.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/13tzTsBF/LAMBA-40.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/prHT1jcV/LAMBA-35.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/Nj7xN8NF/LAMBA-1.jpg", desc: "Elit Mozaik Lamba İLETİSİM DM VE : 05388558257 ." },
+                    { src: "https://i.postimg.cc/KY79LD2m/LAMBA-10.jpg", desc: "Traditional craftsmanship meets contemporary elegance." }
+                ];
 
-                <div class="form-group">
-                    <label for="message">Message / Mesaj:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="interest">I'm interested in / İlgi alanım:</label>
-                    <select id="interest" name="interest">
-                        <option value="wholesale">Wholesale / Toptan satış</option>
-                        <option value="retail">Retail / Perakende satış</option>
-                        <option value="custom">Custom order / Özel sipariş</option>
-                        <option value="other">Other / Diğer</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="submit-btn">Send / Gönder</button>
-            </form>
+                images.forEach((item, index) => {
+                    document.write(`
+                        <div class="product" onclick="openPopup('${item.src}', '${item.desc}')">
+                            <img src="${item.src}" alt="Mosaic Lamp ${index + 1}">
+                            <p>Mosaic Lamp ${index + 1}</p>
+                        </div>
+                    `);
+                });
+            </script>
         </div>
+
+        <div class="section" id="about">
+            <h2>About Us | Hakkımızda</h2>
+            <p><strong>English:</strong> Elit Mozaik Lamba brings centuries-old Turkish mosaic craftsmanship to the modern world. Each lamp is 100% handmade, created with passion and precision. Our designs blend tradition with innovation to illuminate your space with beauty and cultural heritage.</p>
+            <p><strong>Türkçe:</strong> Elit Mozaik Lamba, yüzyıllara dayanan Türk mozaik sanatını günümüze taşıyor. Her lamba %100 el yapımı olup, tutku ve özenle üretilmektedir. Tasarımlarımız, geleneği yenilikle harmanlayarak mekanınıza estetik ve kültürel miras katıyor.</p>
+        </div>
+
+       <div class="section" id="contact">
+    <h2>Contact Us | İletişim</h2>
+
+    <p><strong>English:</strong>
+    At Elit Mozaik Lamba, we craft and distribute handmade mosaic lamps that bring timeless Turkish artistry to the world. Whether you're looking for wholesale or retail options, we ensure each lamp is made with passion and expertise. If you’re interested in purchasing, collaborating, or learning more, feel free to get in touch. We provide manufacturing, distribution, and export services, guaranteeing quality in every product.</p>
+
+    <p>Contact us via DM or call: <strong>05388558257</strong>. We look forward to helping you find the perfect handmade lamp for your space.</p>
+
+    <p><strong>Türkçe:</strong>
+    Elit Mozaik Lamba olarak, geleneksel Türk mozaik sanatını yaşatarak el yapımı lambalar üretiyor ve dağıtıyoruz. Toptan ve perakende satış seçeneklerimizle, her ürünü en yüksek kalite ve ustalıkla sunuyoruz. Sipariş vermek, iş birliği yapmak veya detaylı bilgi almak için bizimle iletişime geçebilirsiniz. Üretim, dağıtım ve ihracat alanlarında hizmet vererek, her müşterimize en iyi deneyimi sunmayı hedefliyoruz.</p>
+
+    <p>DM veya doğrudan şu numaradan ulaşabilirsiniz: <strong>05388558257</strong>. Eşsiz mozaik lambalarımızı sizinle buluşturmak için sabırsızlanıyoruz.</p>
+</div>
+
+    </main>
+
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popupImg" src="" alt="Large Image">
+        <div class="description" id="popupDesc"></div>
     </div>
 
-    <!-- All your existing popup and footer remains the same -->
-    <!-- ... -->
-
     <script>
-        // Your existing gallery and popup code remains the same
-        // ...
+        function openPopup(imageSrc, description) {
+            const popup = document.getElementById('popup');
+            const popupImg = document.getElementById('popupImg');
+            const popupDesc = document.getElementById('popupDesc');
 
-        // Replace the form submission handler with GAS version
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contact-form');
-            const messageDiv = document.getElementById('form-messages');
+            popupImg.src = imageSrc;
+            popupDesc.innerText = description;
+            popup.style.display = 'flex';
+        }
 
-            if (form) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault();
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
 
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Sending...';
-
-                    try {
-                        const formData = {
-                            name: form.name.value,
-                            email: form.email.value,
-                            phone: form.phone.value,
-                            message: form.message.value,
-                            interest: form.interest.value
-                        };
-
-                        // Your GAS Web App URL
-                        const GAS_URL = "https://script.google.com/macros/s/AKfycbzelpsVUxW-hfNhTO1d_t4D-CIEUZje0kcDQet4aydDuQnkjV4uo3_1AlGBjtr4hesxxg/exec";
-
-                        const response = await fetch(GAS_URL, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(formData),
-                        });
-
-                        const result = await response.json();
-
-                        if (result.result === "success") {
-                            messageDiv.textContent = "Message sent successfully!";
-                            messageDiv.className = "form-message success";
-                            form.reset();
-                        } else {
-                            throw new Error(result.error || "Failed to send message.");
-                        }
-                    } catch (error) {
-                        messageDiv.textContent = "Error: " + error.message;
-                        messageDiv.className = "form-message error";
-                    } finally {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = "Send / Gönder";
-                    }
-                });
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closePopup();
             }
         });
 
-        // Rest of your existing JavaScript remains the same
-        // ...
+        document.getElementById('popup').addEventListener("click", function(event) {
+            if (event.target === this) {
+                closePopup();
+            }
+        });
     </script>
+
+   <footer style="background: url('https://i.postimg.cc/qqXpzMc1/Mosaic-Background.jpg') no-repeat center/cover; padding: 20px; color: white;">
+    <p>&copy; 2025 Elit Mozaik Lamba | All Rights Reserved</p>
+</footer>
+
+
 </body>
 </html>
