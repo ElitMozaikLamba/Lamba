@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elit Mozaik Lamba</title>
     <style>
+        /* General Page Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,11 +13,15 @@
             text-align: center;
             background-color: #f4f4f4;
         }
+
+        /* HEADER SECTION */
         header {
-            background: #d35400;
-            padding: 20px;
+            background: url('https://i.postimg.cc/wMZWp6JB/Mosaic-Art.jpg') no-repeat center/cover;
+            padding: 40px;
             color: white;
         }
+
+        /* Navigation Bar */
         nav ul {
             list-style: none;
             padding: 0;
@@ -30,16 +35,23 @@
             color: white;
             font-weight: bold;
         }
+
+        /* Main Content */
         main {
             padding: 20px;
         }
+
+        /* PRODUCT GALLERY */
         .gallery {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust for 2 or 3 columns */
+            gap: 15px;
             justify-content: center;
-            flex-wrap: wrap;
         }
+
+        /* Individual Product Boxes */
         .product {
-            width: 200px;
+            width: 300px; /* Increase width to make images larger */
             margin: 10px;
             padding: 10px;
             background: white;
@@ -51,6 +63,8 @@
             height: auto;
             border-radius: 8px;
         }
+
+        /* FOOTER SECTION */
         footer {
             background: #d35400;
             color: white;
@@ -59,27 +73,11 @@
             bottom: 0;
             width: 100%;
         }
-        /* Smooth scroll for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 700px) {
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-            .product {
-                width: 90%;
-            }
-            footer {
-                position: static;
-            }
-        }
     </style>
 </head>
 <body>
 
+    <!-- HEADER SECTION -->
     <header>
         <h1>Elit Mozaik Lamba</h1>
         <nav>
@@ -92,11 +90,13 @@
         </nav>
     </header>
 
+    <!-- HOME SECTION -->
     <main id="home">
         <h2>Welcome to Elit Mozaik Lamba</h2>
         <p>Wholesale handmade mosaic lamps crafted with elegance.</p>
     </main>
 
+    <!-- PRODUCT SECTION -->
     <main id="products">
         <h2>Our Products</h2>
         <div class="gallery">
@@ -116,21 +116,45 @@
                 <img src="https://i.postimg.cc/JhQqt7Nn/LAMBA-12.jpg" alt="Mosaic Lamp 4">
                 <p>Mosaic Lamp 4</p>
             </div>
+
+            <!-- 16 New Products -->
+            <script>
+                let newProducts = [
+                    "LAMBA-13.jpg", "LAMBA-14.jpg", "LAMBA-15.jpg", "LAMBA-16.jpg",
+                    "LAMBA-17.jpg", "LAMBA-18.jpg", "LAMBA-19.jpg", "LAMBA-20.jpg",
+                    "LAMBA-21.jpg", "LAMBA-22.jpg", "LAMBA-23.jpg", "LAMBA-24.jpg",
+                    "LAMBA-25.jpg", "LAMBA-26.jpg", "LAMBA-27.jpg", "LAMBA-28.jpg"
+                ];
+
+                newProducts.forEach((image, index) => {
+                    document.write(`
+                        <div class="product">
+                            <img src="https://i.postimg.cc/${image}" alt="Mosaic Lamp ${index + 5}">
+                            <p>Mosaic Lamp ${index + 5}</p>
+                        </div>
+                    `);
+                });
+            </script>
         </div>
     </main>
 
+    <!-- ABOUT SECTION -->
     <main id="about">
+        <img src="your-about-image.jpg" alt="About Us Section Image">
         <h2>About Us</h2>
         <p>Elit Mozaik Lamba specializes in handcrafted mosaic lamps, ensuring quality and artistry in every piece.</p>
     </main>
 
+    <!-- CONTACT SECTION -->
     <main id="contact">
+        <img src="your-contact-image.jpg" alt="Contact Section Image">
         <h2>Contact Us</h2>
         <p>Email: info@elitmozaiklamba.com</p>
         <p>Phone (Türkiye): 0538 855 8257</p>
         <p>Phone (International): 01190 538 855 8257</p>
     </main>
 
+    <!-- FOOTER SECTION -->
     <footer>
         <p>&copy; 2025 Elit Mozaik Lamba | All Rights Reserved</p>
     </footer>
