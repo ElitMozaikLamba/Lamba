@@ -21,9 +21,9 @@
                 header {
     position: relative; /* Set parent position for pseudo-element positioning */
     padding: 15px 20px;
-    min-height: 100px;
+    min-height: 25px;
     color: white;
-    position: sticky;
+    position: ;
     top: 0;
     z-index: 100; /* Ensure content is above the background image */
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -34,13 +34,13 @@
 
 header::before {
     content: ''; /* Required for pseudo-elements to render */
-    background: url('https://i.postimg.cc/RV4bBr4L/Background-ELM-Header.jpg') no-repeat center 20%/cover;
+    background: url('') no-repeat center 20%/cover;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5; /* Sets the opacity to 50% */
+    opacity: 0.2; /* Sets the opacity to 50% */
     z-index: -1; /* Positions the background image behind the header content */
 }
 
