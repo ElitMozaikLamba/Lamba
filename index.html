@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Elit Mozaik Lamba | Handmade Turkish Mosaic Lamps - Wholesale & Retail</title>
-        <meta name="description" content="Manufacturer of authentic handmade Turkish mosaic lamps. Wholesale & retail. Custom designs available. Contact: +90 538 855 82 57">
+        <meta name="description" content="Manufacturer of authentic handmade Turkish mosaic lamps. Wholesale & retail. Custom designs available. Contact: +90 538 855 8257">
         <meta name="keywords" content="Turkish mosaic lamps, handmade mosaic lamps, wholesale mosaic lamps, Istanbul mosaic lamps, Turkish lighting, handmade glass lamps">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
          <style>
@@ -595,61 +595,121 @@
             color: #777;
         }
 
-        /* Contact Form Improvements */
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
 
+    /* Updated Contact Form Container */
+    /* Enhanced Contact Form Styles */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--dark);
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #e0d6cc;
+        border-radius: 6px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background-color: #faf7f4;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.15);
+        background-color: white;
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+
+    /* Enhanced Submit Button */
+    .submit-btn {
+        background: var(--primary);
+        color: white;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 1.1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+        margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+        background: var(--dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(139, 90, 43, 0.3);
+    }
+
+    .submit-btn:active {
+        transform: translateY(0);
+    }
+
+    .submit-btn i {
+        font-size: 1.2em;
+        transition: transform 0.3s;
+    }
+
+    .submit-btn:hover i {
+        transform: translateX(3px);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
         .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--dark);
+        .form-group.full-width {
+            grid-column: span 1;
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.2);
-        }
-
         .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+            padding: 12px 15px;
         }
 
-        .form-group.full-width {
-            grid-column: 1 / -1;
+        .submit-btn {
+            padding: 14px 30px;
+            width: 100%;
         }
+    }
 
+    /* Rest of your existing CSS remains the same */
+
+        /* IMPROVED SUBMIT BUTTON - ONLY CHANGE MADE */
         .submit-btn {
             background: var(--primary);
             color: white;
@@ -662,11 +722,30 @@
             font-size: 1rem;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .submit-btn:hover {
             background: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn i {
+            font-size: 1.1em;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover i {
+            transform: translateX(3px);
         }
 
         /* Footer Improvements */
@@ -946,477 +1025,153 @@
             <div class="gallery">
                <script>
     let products = [
-        {
-            code: "IKA-02",
-            desc: "Traditional Turkish mosaic lamp with hand-cut colored glass pieces arranged in geometric patterns. Perfect for creating authentic Middle Eastern ambiance in restaurants, hotels, or homes.",
-            images: ["https://i.postimg.cc/85vPNgpH/IKA-02.jpg"],
-            specs: {
-                "Height": "45 cm",
-                "Width": "30 cm",
-                "Weight": "2.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            },
-            isNew: true
-        },
-        {
-            code: "HMS-01",
-            desc: "Unique combination of mosaic glass and hand-hammered metalwork. The metal base is crafted by our coppersmiths using centuries-old techniques.",
-            images: ["https://i.postimg.cc/BnhvCC7x/HMS-01.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "35 cm",
-                "Weight": "3.2 kg",
-                "Materials": "Hand-cut glass, hammered copper",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            },
-            bestseller: true
-        },
-        {
-            code: "KM-02",
-            desc: "Contemporary interpretation of classic Turkish designs. Features larger glass pieces for a more modern aesthetic while maintaining traditional craftsmanship.",
-            images: ["https://i.postimg.cc/GtJLTPsT/KM-02.jpg"],
-            specs: {
-                "Height": "40 cm",
-                "Width": "40 cm",
-                "Weight": "2.8 kg",
-                "Materials": "Hand-cut glass, iron frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "M-01",
-            desc: "Inspired by North African designs with vibrant colors and intricate patterns. Each piece is signed by the master artisan.",
-            images: ["https://i.postimg.cc/g0CmMtV6/M-01.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "35 cm",
-                "Weight": "3.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "KM-03",
-            desc: "Modern design with traditional Turkish craftsmanship. Features a unique geometric pattern that casts beautiful shadows when lit.",
-            images: ["https://i.postimg.cc/CMjL206M/KM-03.jpg"],
-            specs: {
-                "Height": "42 cm",
-                "Width": "42 cm",
-                "Weight": "3.0 kg",
-                "Materials": "Hand-cut glass, iron frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "M-02",
-            desc: "Vibrant colors and intricate patterns inspired by Moroccan design. Handcrafted by skilled artisans using traditional techniques.",
-            images: ["https://i.postimg.cc/tTFy8dkv/M-02.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "40 cm",
-                "Weight": "3.1 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AP-02",
-            desc: "Traditional Anatolian patterns with a modern twist. Each piece is unique due to the handmade nature of the glass cutting.",
-            images: ["https://i.postimg.cc/WbGF0gPn/AP-02.jpg"],
-            specs: {
-                "Height": "38 cm",
-                "Width": "38 cm",
-                "Weight": "2.7 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AP-03",
-            desc: "Elegant design featuring traditional Turkish patterns. The brass frame adds durability and a luxurious finish.",
-            images: ["https://i.postimg.cc/2SCqGykf/AP-03.jpg"],
-            specs: {
-                "Height": "40 cm",
-                "Width": "40 cm",
-                "Weight": "2.9 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AS-02",
-            desc: "Exclusive design by master artisans. Features complex geometric patterns that create stunning light effects when illuminated.",
-            images: ["https://i.postimg.cc/dtPZ7ng3/AS-02.jpg"],
-            specs: {
-                "Height": "48 cm",
-                "Width": "35 cm",
-                "Weight": "3.3 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AS-03",
-            desc: "Handcrafted masterpiece featuring intricate patterns and premium materials. Each piece takes approximately 3 days to complete.",
-            images: ["https://i.postimg.cc/pLkm6vr5/AS-03.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "36 cm",
-                "Weight": "3.4 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AS-04",
-            desc: "Premium quality lamp with exceptional attention to detail. The pattern is designed to create a mesmerizing light display.",
-            images: ["https://i.postimg.cc/MTfXHjD1/AS-04.jpg"],
-            specs: {
-                "Height": "52 cm",
-                "Width": "38 cm",
-                "Weight": "3.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AS-05",
-            desc: "Luxury edition with rare color combinations. Only a limited number of these lamps are produced each month.",
-            images: ["https://i.postimg.cc/jj5DV1ng/AS-05.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "40 cm",
-                "Weight": "3.7 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AS-06",
-            desc: "Exceptional craftsmanship with a unique pattern that can't be found elsewhere. Signed by the master artisan who created it.",
-            images: ["https://i.postimg.cc/7LWfqNgx/AS-06.jpg"],
-            specs: {
-                "Height": "58 cm",
-                "Width": "42 cm",
-                "Weight": "3.8 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AST-03",
-            desc: "Star-shaped design that creates beautiful light patterns. Inspired by traditional Turkish star motifs.",
-            images: ["https://i.postimg.cc/sxFxhD6q/AST-03.jpg"],
-            specs: {
-                "Height": "45 cm",
-                "Width": "45 cm",
-                "Weight": "3.2 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AST-05",
-            desc: "Larger version of our popular star lamp. Features more complex patterns and premium materials.",
-            images: ["https://i.postimg.cc/Vvj6BQ26/AST-05.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "50 cm",
-                "Weight": "3.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AST-07",
-            desc: "Premium star lamp with intricate details. The pattern is designed to create a stunning light show when illuminated.",
-            images: ["https://i.postimg.cc/3rpdHmWT/AST-07.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "55 cm",
-                "Weight": "3.8 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AST-09",
-            desc: "Oversized masterpiece that commands attention. Perfect for hotel lobbies, high-end restaurants, or luxurious homes.",
-            images: ["https://i.postimg.cc/fTNkWy00/AST-09.jpg"],
-            specs: {
-                "Height": "60 cm",
-                "Width": "60 cm",
-                "Weight": "4.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "AST-011",
-            desc: "Our largest and most impressive star lamp. Requires special packaging due to its size and delicate nature.",
-            images: ["https://i.postimg.cc/m2ykP4Qp/AST-011.jpg"],
-            specs: {
-                "Height": "65 cm",
-                "Width": "65 cm",
-                "Weight": "4.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Triple-boxed with extra foam protection"
-            }
-        },
-        {
-            code: "IB-02",
-            desc: "Elegant boutique-style lamp inspired by Istanbul's luxury hotels. Features a refined color palette and delicate patterns.",
-            images: ["https://i.postimg.cc/kgM48HsJ/IB-02.jpg"],
-            specs: {
-                "Height": "40 cm",
-                "Width": "30 cm",
-                "Weight": "2.6 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "IB-03",
-            desc: "Sophisticated design with a modern twist on traditional patterns. The perfect blend of contemporary and classic styles.",
-            images: ["https://i.postimg.cc/43mx2hjj/IB-03.jpg"],
-            specs: {
-                "Height": "42 cm",
-                "Width": "32 cm",
-                "Weight": "2.7 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "IB-04",
-            desc: "Luxury boutique lamp with premium materials. The glass pieces are specially selected for their clarity and color consistency.",
-            images: ["https://i.postimg.cc/Pq9rg5jJ/IB-04.jpg"],
-            specs: {
-                "Height": "45 cm",
-                "Width": "35 cm",
-                "Weight": "2.9 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "IB-05",
-            desc: "Top-of-the-line boutique lamp with exceptional craftsmanship. Each piece is inspected by our quality control team before shipping.",
-            images: ["https://i.postimg.cc/mkGZrphG/IB-05.jpg"],
-            specs: {
-                "Height": "48 cm",
-                "Width": "38 cm",
-                "Weight": "3.1 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E14 (max 40W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "LAM-03",
-            desc: "Exceptional quality lamp that represents the pinnacle of Turkish mosaic craftsmanship. Takes a week to complete by our most experienced artisans.",
-            images: ["https://i.postimg.cc/zX8XZQ9C/LAM-03.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "40 cm",
-                "Weight": "3.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "LAM-05",
-            desc: "Masterfully crafted lamp with a unique design that can't be replicated exactly due to the nature of handmade glass cutting.",
-            images: ["https://i.postimg.cc/bNgYzThK/LAM-05.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "45 cm",
-                "Weight": "3.8 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "LAM-07",
-            desc: "Showpiece lamp designed for luxury interiors. The pattern is inspired by historic Turkish architecture.",
-            images: ["https://i.postimg.cc/qv7Jg3Bg/LAM-07.jpg"],
-            specs: {
-                "Height": "60 cm",
-                "Width": "50 cm",
-                "Weight": "4.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "LAM-09",
-            desc: "Oversized masterpiece that commands attention. Perfect for hotel lobbies, high-end restaurants, or luxurious homes.",
-            images: ["https://i.postimg.cc/y8rVR8Wj/LAM-09.jpg"],
-            specs: {
-                "Height": "65 cm",
-                "Width": "55 cm",
-                "Weight": "4.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Triple-boxed with extra foam protection"
-            }
-        },
-        {
-            code: "LAM-011",
-            desc: "Our most exclusive and impressive lamp. Each piece is a true work of art that represents hundreds of hours of craftsmanship.",
-            images: ["https://i.postimg.cc/xdJ93Vz2/LAM-011.jpg"],
-            specs: {
-                "Height": "70 cm",
-                "Width": "60 cm",
-                "Weight": "5.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Triple-boxed with extra foam protection"
-            }
-        },
-        {
-            code: "MS-01",
-            desc: "Inspired by the colors of the Mediterranean Sea. Features blues and turquoises that evoke coastal living.",
-            images: ["https://i.postimg.cc/sxyyzB0j/MS-01.jpg"],
-            specs: {
-                "Height": "45 cm",
-                "Width": "35 cm",
-                "Weight": "3.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "MS-02",
-            desc: "Beautiful coastal colors combined with traditional Turkish patterns. The perfect lamp for beach houses or Mediterranean-themed interiors.",
-            images: ["https://i.postimg.cc/MZbqDDvv/MS-02.jpg"],
-            specs: {
-                "Height": "48 cm",
-                "Width": "38 cm",
-                "Weight": "3.2 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "MS-03",
-            desc: "Vibrant sea-inspired colors that brighten any space. The glass pieces are specially selected for their water-like clarity.",
-            images: ["https://i.postimg.cc/fyKsRw6x/MS-03.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "40 cm",
-                "Weight": "3.4 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "MS-04",
-            desc: "Larger version of our popular Mediterranean lamp. Features more complex patterns and deeper blue tones.",
-            images: ["https://i.postimg.cc/65Ww1vvz/MS-04.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "45 cm",
-                "Weight": "3.7 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "MS-05",
-            desc: "Premium Mediterranean design with gold accents. The brass frame is hand-polished to a mirror finish.",
-            images: ["https://i.postimg.cc/vH0MRZ7y/MS-05.jpg"],
-            specs: {
-                "Height": "58 cm",
-                "Width": "48 cm",
-                "Weight": "3.9 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "MS-06",
-            desc: "Our most elaborate Mediterranean design. Features multiple shades of blue and green to create a stunning watercolor effect.",
-            images: ["https://i.postimg.cc/JzgLnYdd/MS-06.jpg"],
-            specs: {
-                "Height": "60 cm",
-                "Width": "50 cm",
-                "Weight": "4.1 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "OL-01",
-            desc: "Inspired by designs from the Ottoman Empire era. Features historical patterns that have been passed down through generations of artisans.",
-            images: ["https://i.postimg.cc/6pTKBxzv/OL-01.jpg"],
-            specs: {
-                "Height": "50 cm",
-                "Width": "40 cm",
-                "Weight": "3.5 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "OL-03",
-            desc: "Authentic Ottoman design with intricate geometric patterns. Each piece is a tribute to Turkey's rich artistic heritage.",
-            images: ["https://i.postimg.cc/LXFFkYSt/OL-03.jpg"],
-            specs: {
-                "Height": "55 cm",
-                "Width": "45 cm",
-                "Weight": "3.8 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        },
-        {
-            code: "OL-05",
-            desc: "Premium Ottoman-style lamp that recreates designs from palace decorations. A true piece of living history.",
-            images: ["https://i.postimg.cc/4dvkWf4r/OL-05.jpg"],
-            specs: {
-                "Height": "60 cm",
-                "Width": "50 cm",
-                "Weight": "4.0 kg",
-                "Materials": "Hand-cut glass, brass frame",
-                "Bulb Type": "E27 (max 60W)",
-                "Packaging": "Double-boxed with foam protection"
-            }
-        }
-    ];
+    {
+        code: "IKA-02",
+        images: ["https://i.postimg.cc/85vPNgpH/IKA-02.jpg"],
+        isNew: true
+    },
+    {
+        code: "HMS-01",
+        images: ["https://i.postimg.cc/BnhvCC7x/HMS-01.jpg"],
+        bestseller: true
+    },
+    {
+        code: "KM-02",
+        images: ["https://i.postimg.cc/GtJLTPsT/KM-02.jpg"]
+    },
+    {
+        code: "M-01",
+        images: ["https://i.postimg.cc/g0CmMtV6/M-01.jpg"]
+    },
+    {
+        code: "KM-03",
+        images: ["https://i.postimg.cc/CMjL206M/KM-03.jpg"]
+    },
+    {
+        code: "M-02",
+        images: ["https://i.postimg.cc/tTFy8dkv/M-02.jpg"]
+    },
+    {
+        code: "AP-02",
+        images: ["https://i.postimg.cc/WbGF0gPn/AP-02.jpg"]
+    },
+    {
+        code: "AP-03",
+        images: ["https://i.postimg.cc/2SCqGykf/AP-03.jpg"]
+    },
+    {
+        code: "AS-02",
+        images: ["https://i.postimg.cc/dtPZ7ng3/AS-02.jpg"]
+    },
+    {
+        code: "AS-03",
+        images: ["https://i.postimg.cc/pLkm6vr5/AS-03.jpg"]
+    },
+    {
+        code: "AS-04",
+        images: ["https://i.postimg.cc/MTfXHjD1/AS-04.jpg"]
+    },
+    {
+        code: "AS-05",
+        images: ["https://i.postimg.cc/jj5DV1ng/AS-05.jpg"]
+    },
+    {
+        code: "AS-06",
+        images: ["https://i.postimg.cc/7LWfqNgx/AS-06.jpg"]
+    },
+    {
+        code: "AST-03",
+        images: ["https://i.postimg.cc/sxFxhD6q/AST-03.jpg"]
+    },
+    {
+        code: "AST-05",
+        images: ["https://i.postimg.cc/Vvj6BQ26/AST-05.jpg"]
+    },
+    {
+        code: "AST-07",
+        images: ["https://i.postimg.cc/3rpdHmWT/AST-07.jpg"]
+    },
+    {
+        code: "AST-09",
+        images: ["https://i.postimg.cc/fTNkWy00/AST-09.jpg"]
+    },
+    {
+        code: "AST-011",
+        images: ["https://i.postimg.cc/m2ykP4Qp/AST-011.jpg"]
+    },
+    {
+        code: "IB-02",
+        images: ["https://i.postimg.cc/kgM48HsJ/IB-02.jpg"]
+    },
+    {
+        code: "IB-03",
+        images: ["https://i.postimg.cc/43mx2hjj/IB-03.jpg"]
+    },
+    {
+        code: "IB-04",
+        images: ["https://i.postimg.cc/Pq9rg5jJ/IB-04.jpg"]
+    },
+    {
+        code: "IB-05",
+        images: ["https://i.postimg.cc/mkGZrphG/IB-05.jpg"]
+    },
+    {
+        code: "LAM-03",
+        images: ["https://i.postimg.cc/zX8XZQ9C/LAM-03.jpg"]
+    },
+    {
+        code: "LAM-05",
+        images: ["https://i.postimg.cc/bNgYzThK/LAM-05.jpg"]
+    },
+    {
+        code: "LAM-07",
+        images: ["https://i.postimg.cc/qv7Jg3Bg/LAM-07.jpg"]
+    },
+    {
+        code: "LAM-09",
+        images: ["https://i.postimg.cc/y8rVR8Wj/LAM-09.jpg"]
+    },
+    {
+        code: "LAM-011",
+        images: ["https://i.postimg.cc/xdJ93Vz2/LAM-011.jpg"]
+    },
+    {
+        code: "MS-01",
+        images: ["https://i.postimg.cc/sxyyzB0j/MS-01.jpg"]
+    },
+    {
+        code: "MS-02",
+        images: ["https://i.postimg.cc/MZbqDDvv/MS-02.jpg"]
+    },
+    {
+        code: "MS-03",
+        images: ["https://i.postimg.cc/fyKsRw6x/MS-03.jpg"]
+    },
+    {
+        code: "MS-04",
+        images: ["https://i.postimg.cc/65Ww1vvz/MS-04.jpg"]
+    },
+    {
+        code: "MS-05",
+        images: ["https://i.postimg.cc/vH0MRZ7y/MS-05.jpg"]
+    },
+    {
+        code: "MS-06",
+        images: ["https://i.postimg.cc/JzgLnYdd/MS-06.jpg"]
+    },
+    {
+        code: "OL-01",
+        images: ["https://i.postimg.cc/6pTKBxzv/OL-01.jpg"]
+    },
+    {
+        code: "OL-03",
+        images: ["https://i.postimg.cc/LXFFkYSt/OL-03.jpg"]
+    },
+    {
+        code: "OL-05",
+        images: ["https://i.postimg.cc/4dvkWf4r/OL-05.jpg"]
+    }
+];
 
     products.forEach((product, index) => {
         let badge = '';
@@ -1483,47 +1238,51 @@
 
     <p><strong>English:</strong> At Elit Mozaik Lamba, we craft and distribute exquisite handmade mosaic lamps, showcasing the timeless artistry of Turkish craftsmanship. Whether for wholesale or retail, each lamp is created with passion and expertise. We provide manufacturing, distribution, and export services, ensuring quality in every product. Let us help you find the perfect handcrafted lamp for your space.</p>
 
-    <p><strong>For inquiries:</strong> Reach out via DM or call <strong>+90 538 855 82 57</strong>. We’re happy to assist with custom orders, bulk purchases, or any product-related questions.</p>
+    <p><strong>For inquiries:</strong> Reach out via DM or call <strong>+90 538 855 8257</strong>. We're happy to assist with custom orders, bulk purchases, or any product-related questions.</p>
 
     <p><strong>Türkçe:</strong> Elit Mozaik Lamba olarak, geleneksel Türk mozaik sanatını yaşatarak el yapımı lambalar üretiyor ve dünya ile buluşturuyoruz. Toptan ve perakende satış seçeneklerimizle, her ürünümüzü tutkuyla ve uzmanlıkla sunuyoruz. Üretim, dağıtım ve ihracat hizmetlerimizle kaliteyi garanti ediyoruz. Mekânınıza özel el yapımı lambayı bulmanız için buradayız.</p>
 
-    <p><strong>İletişim:</strong> DM yoluyla veya <strong>+90 538 855 82 57</strong> numaralı telefondan bize ulaşabilirsiniz. Özel siparişler, toplu alımlar ve ürünlerimizle ilgili tüm sorularınızı yanıtlamaktan memnuniyet duyarız.</p>
+    <p><strong>İletişim:</strong> DM yoluyla veya <strong>+90 538 855 8257</strong> numaralı telefondan bize ulaşabilirsiniz. Özel siparişler, toplu alımlar ve ürünlerimizle ilgili tüm sorularınızı yanıtlamaktan memnuniyet duyarız.</p>
 
     <div class="contact-info">
-        <p>Email: <a href="mailto:ilkangoksu@gmail.com">ilkangoksu@gmail.com</a></p>
-        <p>Phone: <a href="tel:+905388558257">+90 538 855 8257</a></p>
+        <p>Email: <a href="mailto:elitmosaiclamba@gmail.com">Elitmozaiklamba@gmail.com</a></p>
+        <p>Phone: <a href="tel:+90 538 855 8257">+90 538 8558257</a></p>
     </div>
 </div>
 <!-- Contact Form -->
 <form id="contactForm" action="https://formspree.io/f/xnnvnnnl" method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required placeholder="John Doe">
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group full-width">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="_subject" required placeholder="What is this about?">
+        </div>
+
+        <div class="form-group full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Please type your message here..."></textarea>
+        </div>
+
+        <!-- Hidden Fields -->
+        <input type="hidden" name="_language" value="en">
+        <input type="text" name="_gotcha" style="display:none">
+
+        <!-- Submit Button -->
+        <div class="form-group full-width" style="text-align: center;">
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com">
-    </div>
-
-    <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="_subject" required placeholder="Regarding...">
-    </div>
-
-    <div class="form-group">
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
-    </div>
-
-    <!-- Hidden Fields for Better Deliverability -->
-    <input type="hidden" name="_language" value="en">
-    <input type="text" name="_gotcha" style="display:none">
-
-    <!-- Submit Button -->
-    <button type="submit">
-        <i class="fas fa-paper-plane"></i> Send Message
-    </button>
 </form>
 
 <!-- JavaScript for Popup Message -->
@@ -1566,7 +1325,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Elit Mozaik Lamba</h3>
-                <p>Manufacturer of authentic handmade Turkish mosaic lamps since 2008. Wholesale to businesses worldwide from our workshop in Istanbul.</p>
+                <p>Manufacturer of authentic handmade Turkish mosaic lamps since 2000. Wholesale to businesses worldwide from our workshop in Istanbul.</p>
                 <div class="social-footer">
                     <a href="https://www.instagram.com/elitmozaiklamba/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/elitmozaiklamba" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -1579,31 +1338,26 @@ document.getElementById("contactForm").addEventListener("submit", function(event
                 <ul class="footer-links">
                     <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
                     <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Client Testimonials</a></li>
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Request Catalog</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Contact</h3>
                 <ul class="footer-links">
-                    <li><a href="https://maps.google.com/?q=Elit+Mozaik+Lamba,Istanbul" target="_blank"><i class="fas fa-map-marker-alt"></i> Atatürk Bulvarı No:123, Istanbul, Turkey</a></li>
-                    <li><a href="tel:+905555555555"><i class="fas fa-phone-alt"></i> +90 555 555 55 55</a></li>
-                    <li><a href="mailto:info@elitmozaiklamba.com"><i class="fas fa-envelope"></i> info@elitmozaiklamba.com</a></li>
-                    <li><a href="https://wa.me/905555555555" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
+                    <li><a href="https://maps.google.com/?q=Elit+Mozaik+Lamba,Istanbul" target="_blank"><i class="fas fa-map-marker-alt"></i> Atatürk Bulvarı No:123, Istanbul, Turkiye</a></li>
+                    <li><a href="tel:+905388558257"><i class="fas fa-phone-alt"></i> +90 538 855 8257</a></li>
+                    <li><a href="mailto:elitmozaiklamba@gmail.com"><i class="fas fa-envelope"></i> elitmozaiklamba@gmail.com</a></li>
+                    <li><a href="https://wa.me/905388558257" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Business Hours</h3>
-                <p><strong>Monday-Friday:</strong> 9:00 - 18:00 (GMT+3)</p>
-                <p><strong>Saturday:</strong> 10:00 - 15:00</p>
-                <p><strong>Sunday:</strong> Closed</p>
-                <h3 style="margin-top: 20px;">Certifications</h3>
+               <h3 style="margin-top: 20px;">Certifications</h3>
                 <img src="https://via.placeholder.com/120x60?text=CE+Certified" alt="CE Certified" style="margin-top: 10px; filter: brightness(0) invert(1); opacity: 0.8;">
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Elit Mozaik Lamba. All Rights Reserved. | <a href="#" style="color: var(--secondary);">Privacy Policy</a> | <a href="#" style="color: var(--secondary);">Terms of Service</a></p>
+            <p>&copy; 2000 Elit Mozaik Lamba. All Rights Reserved. | <a href="#" style="color: var(--secondary);">Privacy Policy</a> | <a href="#" style="color: var(--secondary);">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -1651,7 +1405,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
             <i class="fas fa-check-circle" style="font-size: 60px; color: #4CAF50; margin-bottom: 20px;"></i>
             <h2 style="color: var(--primary); margin-bottom: 20px;">Thank You!</h2>
             <p>Your wholesale inquiry has been received. Our sales team will contact you within 24 hours with our catalog and pricing information.</p>
-            <p>For immediate assistance, please message us on <a href="https://wa.me/905555555555" style="color: var(--primary); font-weight: 600;">WhatsApp</a>.</p>
+            <p>For immediate assistance, please message us on <a href="https://wa.me/905388558257" style="color: var(--primary); font-weight: 600;">WhatsApp</a>.</p>
             <button class="cta-button" onclick="closePopup()" style="margin-top: 30px;">Close</button>
         </div>
     </div>
@@ -1706,7 +1460,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
             message += "\n\nPlease send me more information about pricing and shipping options.\n\nThank you!";
 
             const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/905555555555?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/905388558257?text=${encodedMessage}`, '_blank');
         }
 
         // Form Submission
