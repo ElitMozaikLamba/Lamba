@@ -1410,7 +1410,7 @@ function closeModal(id) {
             <button class="cta-button" onclick="closePopup()" style="margin-top: 30px;">Close</button>
         </div>
     </div>
-
+        <p>Unique visitors: <span id="counter">Loading...</span></p>
    <script>
         // Product Popup Functionality
         function openProductPopup(index) {
@@ -1515,29 +1515,41 @@ function closeModal(id) {
         });
 
 
-   // Unique visitor counter
-document.addEventListener('DOMContentLoaded', function() {
-    const counterElement = document.getElementById('counter');
 
-    if (!localStorage.getItem('visited')) {
-        localStorage.setItem('visited', 'true');
 
-        fetch('https://api.countapi.xyz/hit/elitmozaiklamba.github.io/Lamba/visits')
-            .then(res => res.json())
-            .then(data => {
-                if (counterElement) counterElement.textContent = data.value;
-            })
-            .catch(error => {
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            const counterElement = document.getElementById('counter');
+
+            if (!counterElement) return;
+
+            try {
+                // Retrieve current count
+                const response = await fetch('https://api.countapi.xyz/get/elitmozaiklamba.com/visits');
+                const data = await response.json();
+
+                // Check if user has already visited
+                const visited = sessionStorage.getItem('visited');
+
+                if (!visited) {
+                    // First-time visit, increment counter
+                    await fetch('https://api.countapi.xyz/hit/elitmozaiklamba.com/visits');
+                    sessionStorage.setItem('visited', 'true');
+                }
+
+                // Update counter display
+                counterElement.textContent = data.value;
+            } catch (error) {
                 console.error("Counter error:", error);
-                if (counterElement) counterElement.textContent = "0";
-            });
-    } else if (counterElement) {
-        // If already visited, show cached count (optional)
-        counterElement.textContent = localStorage.getItem('lastCount') || "0";
-    }
-});
+                counterElement.textContent = "N/A";
+            }
+        });
+
+
+
     </script>
 
-<p>Unique visits: <span id="counter">Loading...</span></p>
+
+
 </body>
 </html>
