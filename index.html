@@ -1513,6 +1513,31 @@ function closeModal(id) {
                 }
             });
         });
+
+
+   // Unique visitor counter
+document.addEventListener('DOMContentLoaded', function() {
+    const counterElement = document.getElementById('counter');
+
+    if (!localStorage.getItem('visited')) {
+        localStorage.setItem('visited', 'true');
+
+        fetch('https://api.countapi.xyz/hit/elitmozaiklamba.github.io/Lamba/visits')
+            .then(res => res.json())
+            .then(data => {
+                if (counterElement) counterElement.textContent = data.value;
+            })
+            .catch(error => {
+                console.error("Counter error:", error);
+                if (counterElement) counterElement.textContent = "0";
+            });
+    } else if (counterElement) {
+        // If already visited, show cached count (optional)
+        counterElement.textContent = localStorage.getItem('lastCount') || "0";
+    }
+});
     </script>
+
+<p>Unique visits: <span id="counter">Loading...</span></p>
 </body>
 </html>
