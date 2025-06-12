@@ -727,8 +727,6 @@
     }
 }
 
-
-
         /* Footer Improvements */
         footer {
             background: var(--dark);
@@ -966,7 +964,60 @@
             }
         }
 
+               /* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
 
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.close-modal:hover {
+    color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 15px;
+    }
+}
 
         /* Testimonials */
 .testimonials {
@@ -1223,6 +1274,7 @@
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
+
             <div class="footer-column">
                 <h3>Contact</h3>
                 <ul class="footer-links">
@@ -1232,6 +1284,13 @@
                 </ul>
             </div>
         </div>
+         <div class="footer-bottom">
+    <p>&copy; <span id="currentYear"></span> Elit Mozaik Lamba. All Rights Reserved. |
+        <a href="#" onclick="openModal('privacyModal'); return false;" style="color: var(--secondary);">Privacy Policy</a> |
+        <a href="#" onclick="openModal('termsModal'); return false;" style="color: var(--secondary);">Terms of Service</a>
+    </p>
+</div>
+
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear"></span> Elit Mozaik Lamba. All Rights Reserved.</p>
         </div>
@@ -1437,6 +1496,59 @@
                 counterElement.textContent = "1000+";
             }
         }
+        // Modal Functions
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Close modal when clicking outside content
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Close with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+        document.body.style.overflow = 'auto';
+    }
+});
     </script>
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+        <iframe src="https://elitmozaiklamba.github.io/Lamba/Privacy.html"
+                title="Privacy Policy"
+                loading="lazy"
+                style="width:100%; height:80vh; border:none;"></iframe>
+    </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+        <iframe src="https://elitmozaiklamba.github.io/Lamba/Terms.html"
+                title="Terms and Conditions"
+                loading="lazy"
+                style="width:100%; height:80vh; border:none;"></iframe>
+    </div>
+</div>
 </body>
 </html>
