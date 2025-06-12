@@ -28,13 +28,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary: #8B5A2B; /* Earthy brown */
-            --secondary: #D4AF37; /* Gold accent */
-            --dark: #5D4037;
-            --light: #F5F5F5;
-            --text: #333333;
-        }
+  :root {
+    --primary: #704214; /* Rich chestnut */
+    --secondary: #C0A060; /* Subtle gold accent */
+    --dark: #4A2E1E; /* Deep earthy tone */
+    --light: #EFE7DC; /* Soft, warm neutral */
+    --text: #222222; /* Crisp dark for readability */
+}
 
 
         body {
@@ -966,6 +966,85 @@
             }
         }
 
+
+
+        /* Testimonials */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.testimonial:before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: rgba(139, 90, 43, 0.1);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+    z-index: 0;
+}
+
+.testimonial-content {
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    min-height: 120px;
+}
+
+.stars {
+    color: var(--secondary);
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 20px;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary);
+}
+
+.author-info h4 {
+    margin: 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
     </style>
 </head>
 <body>
@@ -1019,10 +1098,80 @@
         <!-- About Section -->
         <div class="section" id="about">
             <h2>About Us | Hakkımızda</h2>
-            <p><strong>English:</strong> Elit Mozaik Lamba brings centuries-old Turkish mosaic craftsmanship to the modern world. Each lamp is 100% handmade by skilled artisans, created with passion and precision using traditional techniques passed down through generations.</p>
-            <p><strong>Türkçe:</strong> Elit Mozaik Lamba, yüzyıllara dayanan Türk mozaik sanatını günümüze taşıyor. Her lamba, nesilden nesile aktarılan geleneksel tekniklerle, usta eller tarafından %100 el yapımı olarak üretilmektedir.</p>
+            <p><strong>English:</strong> Elit Mozaik Lamba is a family-owned business dedicated to preserving the art of Turkish mosaic lamps. With centuries-old craftsmanship passed down through generations, our skilled artisans create 100% handmade lamps using traditional techniques. Every piece reflects our commitment to authentic heritage, precision, and passion, bringing the timeless beauty of Turkish mosaics into homes worldwide.</p>
+            <p><strong>Türkçe:</strong> Elit Mozaik Lamba, aile işletmesi olarak Türk mozaik lambalarının sanatını yaşatmaya adanmıştır. Nesiller boyunca aktarılan asırlık ustalıkla, usta eller her lambayı %100 el yapımı olarak üretir. Geleneksel teknikler ve titiz işçilikle hazırlanmış her parça, Türk kültürel mirasının zamansız güzelliğini dünya çapındaki evlere taşıyor. </p>
+        </div>
+                 <!-- Add this section between the About and Contact sections -->
+<div class="section" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Hear from wholesale buyers and retailers worldwide who trust our handmade mosaic lamps.</p>
+
+    <div class="testimonials" itemscope itemtype="https://schema.org/Review">
+        <!-- Testimonial 1 -->
+        <div class="testimonial" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+            <div class="testimonial-content" itemprop="reviewBody">
+                <p>"We've been sourcing from Elit Mozaik for 3 years. Their quality is unmatched and our customers love the authentic Turkish craftsmanship."</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <img src="https://i.postimg.cc/J7FSrCNr/BG1.jpg" alt="Sarah Johnson" width="50" height="50" itemprop="image">
+                <div class="author-info">
+                    <h4 itemprop="author">Sarah Johnson</h4>
+                    <p>Home Decor Boutique, UK</p>
+                    <meta itemprop="datePublished" content="2023-05-15">
+                </div>
+            </div>
         </div>
 
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <p>"The lamps arrived perfectly packaged. We ordered 50 pieces and every single one was flawless. Will definitely reorder!"</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <img src="https://i.postimg.cc/4Nhqn2Pz/BG2.jpg" alt="Michael Chen" width="50" height="50">
+                <div class="author-info">
+                    <h4>Michael Chen</h4>
+                    <p>Luxury Lighting, Singapore</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <p>"Excellent communication throughout our large wholesale order. The custom designs we requested were executed perfectly."</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <img src="https://i.postimg.cc/wj8PN54n/BG3.jpg" alt="Fatima Al-Mansoori" width="50" height="50">
+                <div class="author-info">
+                    <h4>Fatima Al-Mansoori</h4>
+                    <p>Interior Design Studio, UAE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- Contact Section -->
         <div class="section" id="contact">
             <h2>Contact Us | İletişim</h2>
