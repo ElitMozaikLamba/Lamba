@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -16,7 +16,9 @@
 <meta property="og:image" content="https://i.postimg.cc/VsS61Tsp/Mosaic-Art-2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
+
 <style>
+
 * { box-sizing: border-box; }
 
 html {
@@ -26,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  background: #f6f3eb;
+  background: #d5cabb;
   color: #183d36;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -75,7 +77,7 @@ small, .eyebrow {
 .eyebrow {
   display: block;
   margin-bottom: 24px;
-  color: #a66337;
+  color: #80512e;
 }
 
 .wrap {
@@ -104,11 +106,11 @@ small, .eyebrow {
 }
 
 header {
-  background: #f6f3eb;
+  background: #d5cabb;
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid #d9ded3;
+  border-bottom: 1px solid #b9b6a7;
 }
 
 .header-inner {
@@ -198,7 +200,7 @@ nav a:hover {
 
 .hero-copy p {
   max-width: 680px;
-  color: #54685e;
+  color: #40574d;
   font-size: 1.03rem;
 }
 
@@ -217,7 +219,7 @@ nav a:hover {
 }
 
 .ribbon {
-  border-bottom: 1px solid #dadcd2;
+  border-bottom: 1px solid #b9b6a7;
   padding: 22px 0;
 }
 
@@ -243,7 +245,7 @@ nav a:hover {
 
 .section-head p {
   max-width: 370px;
-  color: #54685e;
+  color: #40574d;
   margin-bottom: 0;
 }
 
@@ -288,7 +290,7 @@ select { min-width: 190px; }
 
 .results {
   font-size: .79rem;
-  color: #54685e;
+  color: #40574d;
   margin-bottom: 25px;
 }
 
@@ -339,7 +341,7 @@ select { min-width: 190px; }
 
 .card small {
   font-size: .65rem;
-  color: #657367;
+  color: #45594c;
   letter-spacing: .1em;
 }
 
@@ -486,7 +488,7 @@ dialog {
   padding: 0;
   width: min(1000px, 94vw);
   max-height: 90dvh;
-  background: #f6f3eb;
+  background: #d5cabb;
   color: #183d36;
 }
 
@@ -551,7 +553,7 @@ body.modal-open { overflow: hidden; }
     top: 100%;
     left: 0;
     width: 100%;
-    background: #f6f3eb;
+    background: #d5cabb;
     padding: 20px 5%;
     border-bottom: 1px solid #ccd4c7;
     flex-direction: column;
@@ -603,6 +605,19 @@ body.modal-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Unified warm palette and consistent components */
+:root{--ink:#183d36;--muted:#40574d;--paper:#d5cabb;--surface:#e5ddcf;--line:#b8b5a5;--gold:#80512e}
+::selection{background:#183d36;color:#fff}body{font-size:16px}header{background:#d5cabbf5;backdrop-filter:blur(12px)}.header-inner{min-height:88px}.brand small{font-size:.62rem}.brand img{width:48px;height:48px}.wrap,.hero-copy{width:min(1240px,90%)}nav a{position:relative}.button,.clear,.menu-toggle{border-radius:6px;min-height:46px;transition:background .2s,box-shadow .2s,transform .2s}.button:hover{background:#254f45;box-shadow:0 5px 14px #183d3618}.button.light:hover,.clear:hover{background:#183d360c}.button.light{border-color:#738477}.button:active{transform:translateY(1px)}
+.hero{border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 90% 10%,#bbad9455,transparent 55%)}.hero-copy{padding:66px 0 36px}.hero-copy h1{font-size:clamp(3.4rem,7vw,6.1rem);margin-bottom:25px}.hero-copy h1 em{font-style:italic;color:#765439}.hero-copy p{max-width:650px;font-size:1rem}.hero-copy p[lang=tr]{font-size:.9rem;margin-bottom:0}.hero-actions{margin:28px 0 30px}.hero-note{border-top:1px solid var(--line);font-size:.7rem}.ribbon{padding:17px 0;background:#c8bdab}.ribbon .wrap{font-size:.73rem}.ribbon span:before{content:'✦';color:#80512e;margin-right:12px}.section{padding:76px 0}.section-head p{font-size:.93rem}.section-head .eyebrow{margin-bottom:16px}.section-head h2{font-size:clamp(2.25rem,4vw,3.4rem)}
+.browse{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-top:28px;gap:16px}.browse .field:first-child{min-width:180px}.field label{font-size:.78rem;font-weight:600}input,textarea,select{background:#f4efe5;border-color:#a6ae9c;border-radius:5px;min-height:48px}input::placeholder,textarea::placeholder{color:#667265;opacity:1}.clear{border-color:#8d9987;background:transparent}.results{font-size:.8rem;margin:0}.catalogue-meta{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:18px 0 25px;flex-wrap:wrap}.catalogue-meta span{font-size:.73rem;color:var(--muted)}.collection-chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;margin:0 0 14px;scrollbar-width:thin}.chip{white-space:nowrap;border:1px solid #a8ae9c;border-radius:30px;background:transparent;color:var(--ink);padding:8px 15px;font-size:.76rem;min-height:40px}.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}.chip:hover{box-shadow:0 2px 6px #183d361c}
+.gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}.card{background:var(--surface);border:1px solid #bbb8a8;border-radius:9px;overflow:hidden;transition:box-shadow .2s,border-color .2s}.card:hover{border-color:#87957f;box-shadow:0 10px 26px #263b2910}.view{background:#fff;overflow:hidden}.view img{aspect-ratio:1;object-fit:contain;transform:none;transition:transform .25s;background:white}.view:hover img{transform:scale(1.035)}.view-label{position:relative;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #c6c6b5;padding:11px 16px;background:#d7cdbd;font-size:.74rem}.card-bottom{padding:16px;gap:10px;border:0}.card h3{font-size:1.15rem;font-weight:600}.card small{font-size:.6rem}.inquiry{padding:9px 12px;border:1px solid #83917c;border-radius:5px;text-decoration:none;font-size:.75rem;white-space:nowrap}.inquiry:hover{background:#183d36;color:white}.empty{border-radius:8px;background:var(--surface)}
+.story{background:#153a33}.story-grid{grid-template-columns:1fr 1.1fr;gap:70px}.story h2{font-size:clamp(2.4rem,4vw,3.7rem)}.story p{font-size:.94rem;line-height:1.85}.story .turkish{font-size:.9rem}.video-placeholder{border-radius:8px;background:#ffffff06;transition:background .2s}.video-placeholder:hover{background:#ffffff12}.video-frame{border-radius:8px}.contact-grid{gap:70px}.contact-grid h2{font-size:clamp(2.3rem,4vw,3.5rem)}#contactForm{padding:30px;border-radius:10px;background:var(--surface);border:1px solid var(--line);align-self:start}.form-grid{gap:22px}.contact-links{border-top:1px solid var(--line);padding-top:25px}.contact-links a{width:fit-content}.contact-note{font-size:.75rem;color:var(--muted);margin-top:16px;margin-bottom:0}footer{background:#bfb49f;border-color:#a6a994}.footer-top{align-items:center}.footer-bottom{border-color:#9fa88f;color:#304c40}.float{background:#153e38;border:1px solid #ffffff44;display:flex;align-items:center;gap:9px;font-size:.77rem}.float svg{width:19px;height:19px;fill:currentColor}.float:hover{background:#285b49}.back-top{font-size:.76rem;text-underline-offset:4px}
+dialog{width:min(1080px,94vw);border-radius:12px;box-shadow:0 25px 100px #0004}.modal-grid{grid-template-columns:1.25fr 1fr}.modal-image{max-height:78dvh;background:#fff;aspect-ratio:1;object-fit:contain}.modal-copy{padding:62px 32px 28px}.modal-copy h2{font-size:3rem}.modal-copy p{font-size:.91rem}.modal-copy .button{width:100%}.close-modal{z-index:2;box-shadow:0 3px 12px #0001}.image-link{display:block;margin-top:18px;font-size:.78rem;text-underline-offset:4px}.modal-pagination{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:24px;border-top:1px solid var(--line);padding-top:20px}.modal-pagination button{border:1px solid #8e9b87;background:transparent;color:var(--ink);padding:8px 13px;border-radius:5px;min-height:42px}.modal-pagination span{font-size:.73rem;color:var(--muted)}
+@media(max-width:1000px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.story-grid,.contact-grid{gap:36px}.hero-copy{padding:54px 0 32px}.browse .field{flex:1}nav{gap:18px}}
+@media(max-width:720px){.header-inner{min-height:76px;gap:12px}.brand img{width:38px;height:38px}.brand-name{font-size:1.14rem}.brand small{font-size:.54rem}.menu-toggle{font-size:.77rem;padding:8px 10px}nav{background:var(--paper);box-shadow:0 14px 20px #183d3612}.hero-copy{padding:42px 0 28px}.hero-copy h1{font-size:clamp(3.1rem,11vw,4.5rem)}.hero-copy .eyebrow{font-size:.63rem;margin-bottom:20px}.hero-actions{gap:9px}.hero-actions .button{padding:12px 16px;font-size:.79rem}.hero-note{font-size:.62rem}.ribbon .wrap{gap:8px 15px;font-size:.64rem}.ribbon span:before{margin-right:7px}.section{padding:52px 0}.section-head{margin-bottom:22px}.section-head p{margin-top:18px}.browse{padding:16px;gap:13px}.browse .field{flex:auto;width:100%}.browse .clear{width:100%}.gallery{grid-template-columns:1fr;gap:24px}.collection-chips{margin-bottom:8px}.catalogue-meta{margin-top:8px;gap:7px}.catalogue-meta span{font-size:.69rem}.card-bottom{padding:17px}.view-label{padding:12px 17px}.story-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.story-grid{gap:36px}.story p{font-size:.93rem}#contactForm{padding:22px 18px}.form-grid{grid-template-columns:1fr;gap:19px}.modal-grid{grid-template-columns:1fr}.modal-image{max-height:50dvh}.modal-copy{padding:25px}.modal-copy h2{font-size:2.3rem}.modal-copy .eyebrow{margin-bottom:12px}.float{right:12px;bottom:12px;padding:10px 15px}.footer-links{gap:14px}.footer-top{padding-bottom:25px}.footer-bottom{padding-bottom:55px}.contact-note{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 
 <script type="application/ld+json">
@@ -620,6 +635,7 @@ body.modal-open { overflow: hidden; }
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Mosaic lamp IKA-02","sku":"IKA-02","image":"https://i.postimg.cc/85vPNgpH/IKA-02.jpg"}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Mosaic lamp HMS-01","sku":"HMS-01","image":"https://i.postimg.cc/BnhvCC7x/HMS-01.jpg"}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Mosaic lamp KM-02","sku":"KM-02","image":"https://i.postimg.cc/GtJLTPsT/KM-02.jpg"}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Mosaic lamp M-01","sku":"M-01","image":"https://i.postimg.cc/g0CmMtV6/M-01.jpg"}},{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Mosaic lamp KM-03","sku":"KM-03","image":"https://i.postimg.cc/CMjL206M/KM-03.jpg"}},{"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Mosaic lamp M-02","sku":"M-02","image":"https://i.postimg.cc/tTFy8dkv/M-02.jpg"}},{"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Mosaic lamp AP-02","sku":"AP-02","image":"https://i.postimg.cc/WbGF0gPn/AP-02.jpg"}},{"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Mosaic lamp AP-03","sku":"AP-03","image":"https://i.postimg.cc/2SCqGykf/AP-03.jpg"}},{"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Mosaic lamp AS-02","sku":"AS-02","image":"https://i.postimg.cc/dtPZ7ng3/AS-02.jpg"}},{"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Mosaic lamp AS-03","sku":"AS-03","image":"https://i.postimg.cc/pLkm6vr5/AS-03.jpg"}},{"@type":"ListItem","position":11,"item":{"@type":"Product","name":"Mosaic lamp AS-04","sku":"AS-04","image":"https://i.postimg.cc/MTfXHjD1/AS-04.jpg"}},{"@type":"ListItem","position":12,"item":{"@type":"Product","name":"Mosaic lamp AS-05","sku":"AS-05","image":"https://i.postimg.cc/jj5DV1ng/AS-05.jpg"}},{"@type":"ListItem","position":13,"item":{"@type":"Product","name":"Mosaic lamp AS-06","sku":"AS-06","image":"https://i.postimg.cc/7LWfqNgx/AS-06.jpg"}},{"@type":"ListItem","position":14,"item":{"@type":"Product","name":"Mosaic lamp AST-03","sku":"AST-03","image":"https://i.postimg.cc/sxFxhD6q/AST-03.jpg"}},{"@type":"ListItem","position":15,"item":{"@type":"Product","name":"Mosaic lamp AST-05","sku":"AST-05","image":"https://i.postimg.cc/Vvj6BQ26/AST-05.jpg"}},{"@type":"ListItem","position":16,"item":{"@type":"Product","name":"Mosaic lamp AST-07","sku":"AST-07","image":"https://i.postimg.cc/3rpdHmWT/AST-07.jpg"}},{"@type":"ListItem","position":17,"item":{"@type":"Product","name":"Mosaic lamp AST-09","sku":"AST-09","image":"https://i.postimg.cc/fTNkWy00/AST-09.jpg"}},{"@type":"ListItem","position":18,"item":{"@type":"Product","name":"Mosaic lamp AST-011","sku":"AST-011","image":"https://i.postimg.cc/m2ykP4Qp/AST-011.jpg"}},{"@type":"ListItem","position":19,"item":{"@type":"Product","name":"Mosaic lamp IB-02","sku":"IB-02","image":"https://i.postimg.cc/kgM48HsJ/IB-02.jpg"}},{"@type":"ListItem","position":20,"item":{"@type":"Product","name":"Mosaic lamp IB-03","sku":"IB-03","image":"https://i.postimg.cc/43mx2hjj/IB-03.jpg"}},{"@type":"ListItem","position":21,"item":{"@type":"Product","name":"Mosaic lamp IB-04","sku":"IB-04","image":"https://i.postimg.cc/Pq9rg5jJ/IB-04.jpg"}},{"@type":"ListItem","position":22,"item":{"@type":"Product","name":"Mosaic lamp IB-05","sku":"IB-05","image":"https://i.postimg.cc/mkGZrphG/IB-05.jpg"}},{"@type":"ListItem","position":23,"item":{"@type":"Product","name":"Mosaic lamp LAM-03","sku":"LAM-03","image":"https://i.postimg.cc/zX8XZQ9C/LAM-03.jpg"}},{"@type":"ListItem","position":24,"item":{"@type":"Product","name":"Mosaic lamp LAM-05","sku":"LAM-05","image":"https://i.postimg.cc/bNgYzThK/LAM-05.jpg"}},{"@type":"ListItem","position":25,"item":{"@type":"Product","name":"Mosaic lamp LAM-07","sku":"LAM-07","image":"https://i.postimg.cc/qv7Jg3Bg/LAM-07.jpg"}},{"@type":"ListItem","position":26,"item":{"@type":"Product","name":"Mosaic lamp LAM-09","sku":"LAM-09","image":"https://i.postimg.cc/y8rVR8Wj/LAM-09.jpg"}},{"@type":"ListItem","position":27,"item":{"@type":"Product","name":"Mosaic lamp LAM-011","sku":"LAM-011","image":"https://i.postimg.cc/xdJ93Vz2/LAM-011.jpg"}},{"@type":"ListItem","position":28,"item":{"@type":"Product","name":"Mosaic lamp MS-01","sku":"MS-01","image":"https://i.postimg.cc/sxyyzB0j/MS-01.jpg"}},{"@type":"ListItem","position":29,"item":{"@type":"Product","name":"Mosaic lamp MS-02","sku":"MS-02","image":"https://i.postimg.cc/MZbqDDvv/MS-02.jpg"}},{"@type":"ListItem","position":30,"item":{"@type":"Product","name":"Mosaic lamp MS-03","sku":"MS-03","image":"https://i.postimg.cc/fyKsRw6x/MS-03.jpg"}},{"@type":"ListItem","position":31,"item":{"@type":"Product","name":"Mosaic lamp MS-04","sku":"MS-04","image":"https://i.postimg.cc/65Ww1vvz/MS-04.jpg"}},{"@type":"ListItem","position":32,"item":{"@type":"Product","name":"Mosaic lamp MS-05","sku":"MS-05","image":"https://i.postimg.cc/vH0MRZ7y/MS-05.jpg"}},{"@type":"ListItem","position":33,"item":{"@type":"Product","name":"Mosaic lamp MS-06","sku":"MS-06","image":"https://i.postimg.cc/JzgLnYdd/MS-06.jpg"}},{"@type":"ListItem","position":34,"item":{"@type":"Product","name":"Mosaic lamp OL-01","sku":"OL-01","image":"https://i.postimg.cc/6pTKBxzv/OL-01.jpg"}},{"@type":"ListItem","position":35,"item":{"@type":"Product","name":"Mosaic lamp OL-03","sku":"OL-03","image":"https://i.postimg.cc/LXFFkYSt/OL-03.jpg"}},{"@type":"ListItem","position":36,"item":{"@type":"Product","name":"Mosaic lamp OL-05","sku":"OL-05","image":"https://i.postimg.cc/4dvkWf4r/OL-05.jpg"}}]}</script>
 </head>
 
 <body>
@@ -665,7 +681,7 @@ body.modal-open { overflow: hidden; }
     <div class="hero-copy">
       <span class="eyebrow">Glass. Colour. A little wonder.</span>
 
-      <h1 id="hero-title">The art of<br>Mosaic light.</h1>
+      <h1 id="hero-title">The art of<br><em>mosaic light.</em></h1>
 
       <p>
         Handmade Turkish mosaic lamps, crafted in Istanbul.
@@ -746,23 +762,49 @@ body.modal-open { overflow: hidden; }
       </button>
     </div>
 
-    <p class="results" id="results" role="status" aria-live="polite">
+    <div class="collection-chips" role="group" aria-label="Filter by collection"><button type="button" class="chip" data-filter="" aria-pressed="true">All · Tümü</button><button type="button" class="chip" data-filter="AP" aria-pressed="false">AP <span aria-hidden="true">(2)</span></button><button type="button" class="chip" data-filter="AS" aria-pressed="false">AS <span aria-hidden="true">(5)</span></button><button type="button" class="chip" data-filter="AST" aria-pressed="false">AST <span aria-hidden="true">(5)</span></button><button type="button" class="chip" data-filter="HMS" aria-pressed="false">HMS <span aria-hidden="true">(1)</span></button><button type="button" class="chip" data-filter="IB" aria-pressed="false">IB <span aria-hidden="true">(4)</span></button><button type="button" class="chip" data-filter="IKA" aria-pressed="false">IKA <span aria-hidden="true">(1)</span></button><button type="button" class="chip" data-filter="KM" aria-pressed="false">KM <span aria-hidden="true">(2)</span></button><button type="button" class="chip" data-filter="LAM" aria-pressed="false">LAM <span aria-hidden="true">(5)</span></button><button type="button" class="chip" data-filter="M" aria-pressed="false">M <span aria-hidden="true">(2)</span></button><button type="button" class="chip" data-filter="MS" aria-pressed="false">MS <span aria-hidden="true">(6)</span></button><button type="button" class="chip" data-filter="OL" aria-pressed="false">OL <span aria-hidden="true">(3)</span></button></div>
+    <div class="catalogue-meta"><p class="results" id="results" role="status" aria-live="polite">
       36 designs · Collections grouped by product-code prefix.
     </p>
 
-    <div class="gallery" id="gallery"></div>
+    <div class="gallery" id="gallery"><article class="card" data-code="IKA-02" data-collection="IKA"><button class="view" type="button" data-product="IKA-02" aria-label="View IKA-02"><img src="https://i.postimg.cc/85vPNgpH/IKA-02.jpg" alt="IKA-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>IKA collection</small><h3>IKA-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20IKA-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about IKA-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="HMS-01" data-collection="HMS"><button class="view" type="button" data-product="HMS-01" aria-label="View HMS-01"><img src="https://i.postimg.cc/BnhvCC7x/HMS-01.jpg" alt="HMS-01 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>HMS collection</small><h3>HMS-01</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20HMS-01.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about HMS-01 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="KM-02" data-collection="KM"><button class="view" type="button" data-product="KM-02" aria-label="View KM-02"><img src="https://i.postimg.cc/GtJLTPsT/KM-02.jpg" alt="KM-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>KM collection</small><h3>KM-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20KM-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about KM-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="M-01" data-collection="M"><button class="view" type="button" data-product="M-01" aria-label="View M-01"><img src="https://i.postimg.cc/g0CmMtV6/M-01.jpg" alt="M-01 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>M collection</small><h3>M-01</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20M-01.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about M-01 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="KM-03" data-collection="KM"><button class="view" type="button" data-product="KM-03" aria-label="View KM-03"><img src="https://i.postimg.cc/CMjL206M/KM-03.jpg" alt="KM-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>KM collection</small><h3>KM-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20KM-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about KM-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="M-02" data-collection="M"><button class="view" type="button" data-product="M-02" aria-label="View M-02"><img src="https://i.postimg.cc/tTFy8dkv/M-02.jpg" alt="M-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>M collection</small><h3>M-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20M-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about M-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AP-02" data-collection="AP"><button class="view" type="button" data-product="AP-02" aria-label="View AP-02"><img src="https://i.postimg.cc/WbGF0gPn/AP-02.jpg" alt="AP-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AP collection</small><h3>AP-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AP-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AP-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AP-03" data-collection="AP"><button class="view" type="button" data-product="AP-03" aria-label="View AP-03"><img src="https://i.postimg.cc/2SCqGykf/AP-03.jpg" alt="AP-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AP collection</small><h3>AP-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AP-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AP-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AS-02" data-collection="AS"><button class="view" type="button" data-product="AS-02" aria-label="View AS-02"><img src="https://i.postimg.cc/dtPZ7ng3/AS-02.jpg" alt="AS-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AS collection</small><h3>AS-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AS-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AS-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AS-03" data-collection="AS"><button class="view" type="button" data-product="AS-03" aria-label="View AS-03"><img src="https://i.postimg.cc/pLkm6vr5/AS-03.jpg" alt="AS-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AS collection</small><h3>AS-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AS-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AS-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AS-04" data-collection="AS"><button class="view" type="button" data-product="AS-04" aria-label="View AS-04"><img src="https://i.postimg.cc/MTfXHjD1/AS-04.jpg" alt="AS-04 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AS collection</small><h3>AS-04</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AS-04.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AS-04 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AS-05" data-collection="AS"><button class="view" type="button" data-product="AS-05" aria-label="View AS-05"><img src="https://i.postimg.cc/jj5DV1ng/AS-05.jpg" alt="AS-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AS collection</small><h3>AS-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AS-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AS-05 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AS-06" data-collection="AS"><button class="view" type="button" data-product="AS-06" aria-label="View AS-06"><img src="https://i.postimg.cc/7LWfqNgx/AS-06.jpg" alt="AS-06 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AS collection</small><h3>AS-06</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AS-06.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AS-06 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AST-03" data-collection="AST"><button class="view" type="button" data-product="AST-03" aria-label="View AST-03"><img src="https://i.postimg.cc/sxFxhD6q/AST-03.jpg" alt="AST-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AST collection</small><h3>AST-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AST-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AST-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AST-05" data-collection="AST"><button class="view" type="button" data-product="AST-05" aria-label="View AST-05"><img src="https://i.postimg.cc/Vvj6BQ26/AST-05.jpg" alt="AST-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AST collection</small><h3>AST-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AST-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AST-05 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AST-07" data-collection="AST"><button class="view" type="button" data-product="AST-07" aria-label="View AST-07"><img src="https://i.postimg.cc/3rpdHmWT/AST-07.jpg" alt="AST-07 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AST collection</small><h3>AST-07</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AST-07.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AST-07 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AST-09" data-collection="AST"><button class="view" type="button" data-product="AST-09" aria-label="View AST-09"><img src="https://i.postimg.cc/fTNkWy00/AST-09.jpg" alt="AST-09 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AST collection</small><h3>AST-09</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AST-09.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AST-09 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="AST-011" data-collection="AST"><button class="view" type="button" data-product="AST-011" aria-label="View AST-011"><img src="https://i.postimg.cc/m2ykP4Qp/AST-011.jpg" alt="AST-011 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>AST collection</small><h3>AST-011</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20AST-011.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about AST-011 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="IB-02" data-collection="IB"><button class="view" type="button" data-product="IB-02" aria-label="View IB-02"><img src="https://i.postimg.cc/kgM48HsJ/IB-02.jpg" alt="IB-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>IB collection</small><h3>IB-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20IB-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about IB-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="IB-03" data-collection="IB"><button class="view" type="button" data-product="IB-03" aria-label="View IB-03"><img src="https://i.postimg.cc/43mx2hjj/IB-03.jpg" alt="IB-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>IB collection</small><h3>IB-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20IB-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about IB-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="IB-04" data-collection="IB"><button class="view" type="button" data-product="IB-04" aria-label="View IB-04"><img src="https://i.postimg.cc/Pq9rg5jJ/IB-04.jpg" alt="IB-04 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>IB collection</small><h3>IB-04</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20IB-04.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about IB-04 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="IB-05" data-collection="IB"><button class="view" type="button" data-product="IB-05" aria-label="View IB-05"><img src="https://i.postimg.cc/mkGZrphG/IB-05.jpg" alt="IB-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>IB collection</small><h3>IB-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20IB-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about IB-05 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="LAM-03" data-collection="LAM"><button class="view" type="button" data-product="LAM-03" aria-label="View LAM-03"><img src="https://i.postimg.cc/zX8XZQ9C/LAM-03.jpg" alt="LAM-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>LAM collection</small><h3>LAM-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20LAM-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about LAM-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="LAM-05" data-collection="LAM"><button class="view" type="button" data-product="LAM-05" aria-label="View LAM-05"><img src="https://i.postimg.cc/bNgYzThK/LAM-05.jpg" alt="LAM-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>LAM collection</small><h3>LAM-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20LAM-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about LAM-05 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="LAM-07" data-collection="LAM"><button class="view" type="button" data-product="LAM-07" aria-label="View LAM-07"><img src="https://i.postimg.cc/qv7Jg3Bg/LAM-07.jpg" alt="LAM-07 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>LAM collection</small><h3>LAM-07</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20LAM-07.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about LAM-07 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="LAM-09" data-collection="LAM"><button class="view" type="button" data-product="LAM-09" aria-label="View LAM-09"><img src="https://i.postimg.cc/y8rVR8Wj/LAM-09.jpg" alt="LAM-09 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>LAM collection</small><h3>LAM-09</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20LAM-09.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about LAM-09 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="LAM-011" data-collection="LAM"><button class="view" type="button" data-product="LAM-011" aria-label="View LAM-011"><img src="https://i.postimg.cc/xdJ93Vz2/LAM-011.jpg" alt="LAM-011 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>LAM collection</small><h3>LAM-011</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20LAM-011.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about LAM-011 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-01" data-collection="MS"><button class="view" type="button" data-product="MS-01" aria-label="View MS-01"><img src="https://i.postimg.cc/sxyyzB0j/MS-01.jpg" alt="MS-01 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-01</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-01.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-01 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-02" data-collection="MS"><button class="view" type="button" data-product="MS-02" aria-label="View MS-02"><img src="https://i.postimg.cc/MZbqDDvv/MS-02.jpg" alt="MS-02 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-02</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-02.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-02 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-03" data-collection="MS"><button class="view" type="button" data-product="MS-03" aria-label="View MS-03"><img src="https://i.postimg.cc/fyKsRw6x/MS-03.jpg" alt="MS-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-04" data-collection="MS"><button class="view" type="button" data-product="MS-04" aria-label="View MS-04"><img src="https://i.postimg.cc/65Ww1vvz/MS-04.jpg" alt="MS-04 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-04</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-04.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-04 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-05" data-collection="MS"><button class="view" type="button" data-product="MS-05" aria-label="View MS-05"><img src="https://i.postimg.cc/vH0MRZ7y/MS-05.jpg" alt="MS-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-05 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="MS-06" data-collection="MS"><button class="view" type="button" data-product="MS-06" aria-label="View MS-06"><img src="https://i.postimg.cc/JzgLnYdd/MS-06.jpg" alt="MS-06 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>MS collection</small><h3>MS-06</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20MS-06.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about MS-06 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="OL-01" data-collection="OL"><button class="view" type="button" data-product="OL-01" aria-label="View OL-01"><img src="https://i.postimg.cc/6pTKBxzv/OL-01.jpg" alt="OL-01 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>OL collection</small><h3>OL-01</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20OL-01.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about OL-01 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="OL-03" data-collection="OL"><button class="view" type="button" data-product="OL-03" aria-label="View OL-03"><img src="https://i.postimg.cc/LXFFkYSt/OL-03.jpg" alt="OL-03 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>OL collection</small><h3>OL-03</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20OL-03.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about OL-03 on WhatsApp">Inquire ↗</a></div></article>
+<article class="card" data-code="OL-05" data-collection="OL"><button class="view" type="button" data-product="OL-05" aria-label="View OL-05"><img src="https://i.postimg.cc/4dvkWf4r/OL-05.jpg" alt="OL-05 mosaic lamp" width="600" height="600" loading="lazy" decoding="async"><span class="view-label"><span>View details · İncele</span><span aria-hidden="true">↗</span></span></button><div class="card-bottom"><div><small>OL collection</small><h3>OL-05</h3></div><a class="inquiry" href="https://wa.me/905388558257?text=Hello%20Elit%20Mozaik%20Lamba%2C%0A%0AI'm%20interested%20in%20OL-05.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you!" target="_blank" rel="noopener noreferrer" aria-label="Inquire about OL-05 on WhatsApp">Inquire ↗</a></div></article></div>
 
-    <noscript>
-      <p>
-        Please enable JavaScript to browse the catalogue.
-        For product information, contact
-        <a href="https://wa.me/905388558257">us on WhatsApp</a>
-        or email
-        <a href="mailto:elitmozaiklamba@gmail.com">
-          elitmozaiklamba@gmail.com
-        </a>.
-      </p>
-    </noscript>
+    <noscript><p>Browse the products below and use their WhatsApp links to inquire. Search and enlarged views require JavaScript.</p></noscript>
 
     <div class="empty" hidden id="empty">
       <p>No matching designs. · Eşleşen ürün bulunamadı.</p>
@@ -923,7 +965,7 @@ body.modal-open { overflow: hidden; }
           rel="noopener noreferrer"
         >Facebook ↗</a>
         <a href="#products">Collection</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a><a class="back-top" href="#main">Back to top ↑</a>
       </div>
     </div>
 
@@ -954,7 +996,7 @@ body.modal-open { overflow: hidden; }
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Contact Elit Mozaik Lamba on WhatsApp"
->WhatsApp ↗</a>
+><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.4-.2-2.6.7.7-2.5-.3-.5A8 8 0 1 1 12 20Zm4.4-5.8c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1-1.4-.6-2.5-1.6-3.2-2.9-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.1-.6l-.8-1.8c-.2-.4-.4-.3-.6-.3h-.5c-.2 0-.4.1-.6.3-.5.5-.8 1.1-.8 1.8 0 1.8 1.5 3.6 1.7 3.8.2.2 2.6 4 6.3 4 .6 0 1.6-.3 1.9-1 .2-.4.3-.9.2-1.1-.1-.2-.3-.3-.5-.4Z"/></svg>WhatsApp ↗</a>
 
 <dialog id="detail" aria-labelledby="detail-title">
   <button
@@ -996,6 +1038,8 @@ body.modal-open { overflow: hidden; }
         id="detail-contact"
         type="button"
       >Use contact form</button>
+      <a class="image-link" id="original-image" target="_blank" rel="noopener noreferrer">Open full image ↗</a>
+      <div class="modal-pagination"><button type="button" id="previous-product" aria-label="Previous product">← Previous</button><span id="product-position" role="status"></span><button type="button" id="next-product" aria-label="Next product">Next →</button></div>
     </div>
   </div>
 </dialog>
@@ -1054,82 +1098,7 @@ function whatsappURL(code) {
     encodeURIComponent(message);
 }
 
-/* Create the catalogue using the original product codes and image URLs. */
-const gallery = $("#gallery");
 
-products.forEach(product => {
-  const collection = product.code.split("-")[0];
-  const article = document.createElement("article");
-
-  article.className = "card";
-  article.dataset.code = product.code;
-  article.dataset.collection = collection;
-
-  const view = document.createElement("button");
-  view.className = "view";
-  view.type = "button";
-  view.dataset.product = product.code;
-  view.setAttribute("aria-label", "View " + product.code);
-
-  const image = document.createElement("img");
-  image.src = product.images[0];
-  image.alt = product.code + " mosaic lamp";
-  image.width = 600;
-  image.height = 600;
-  image.loading = "lazy";
-  image.decoding = "async";
-
-  const viewLabel = document.createElement("span");
-  viewLabel.className = "view-label";
-  viewLabel.textContent = "View details · İncele ↗";
-
-  view.append(image, viewLabel);
-
-  const bottom = document.createElement("div");
-  bottom.className = "card-bottom";
-
-  const information = document.createElement("div");
-  const collectionLabel = document.createElement("small");
-  collectionLabel.textContent = collection + " collection";
-
-  const title = document.createElement("h3");
-  title.textContent = product.code;
-  information.append(collectionLabel, title);
-
-  const inquiry = document.createElement("a");
-  inquiry.className = "inquiry";
-  inquiry.href = whatsappURL(product.code);
-  inquiry.target = "_blank";
-  inquiry.rel = "noopener noreferrer";
-  inquiry.textContent = "Inquire ↗";
-  inquiry.setAttribute(
-    "aria-label",
-    "Inquire about " + product.code + " on WhatsApp"
-  );
-
-  bottom.append(information, inquiry);
-  article.append(view, bottom);
-  gallery.append(article);
-});
-
-/* Product-list structured data, without fabricated prices or ratings. */
-const structuredData = document.createElement("script");
-structuredData.type = "application/ld+json";
-structuredData.textContent = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  itemListElement: products.map((product, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@type": "Product",
-      name: "Mosaic lamp " + product.code,
-      sku: product.code,
-      image: product.images
-    }
-  }))
-});
-document.head.append(structuredData);
 
 /* Search and collection filters */
 const cards = [...document.querySelectorAll(".card")];
@@ -1153,6 +1122,7 @@ function filterProducts() {
     count + " / " + products.length + " ürün";
 
   $("#empty").hidden = count !== 0;
+  document.querySelectorAll('[data-filter]').forEach(chip => chip.setAttribute('aria-pressed', String(chip.dataset.filter === collection)));
 }
 
 function resetFilters() {
@@ -1165,6 +1135,8 @@ $("#search").addEventListener("input", filterProducts);
 $("#collection").addEventListener("change", filterProducts);
 $("#clear").addEventListener("click", resetFilters);
 $("#reset-empty").addEventListener("click", resetFilters);
+document.querySelectorAll('[data-filter]').forEach(chip => chip.addEventListener('click', () => { $('#collection').value=chip.dataset.filter;filterProducts(); }));
+document.addEventListener('click', event => {if(!event.target.closest('header'))closeMenu();});
 
 /* Responsive navigation */
 const menu = $(".menu-toggle");
@@ -1199,27 +1171,30 @@ window.addEventListener("resize", () => {
 const dialog = $("#detail");
 let opener = null;
 
-document.querySelectorAll("[data-product]").forEach(button => {
-  button.addEventListener("click", () => {
-    opener = button;
-
-    const product = products.find(
-      item => item.code === button.dataset.product
-    );
-
-    $("#detail-title").textContent = product.code;
-    $("#detail-collection").textContent =
-      product.code.split("-")[0] + " collection";
-
-    $("#detail-image").src = product.images[0];
-    $("#detail-image").alt = product.code + " mosaic lamp";
-    $("#detail-whatsapp").href = whatsappURL(product.code);
-
-    dialog.showModal();
-    document.body.classList.add("modal-open");
-  });
-});
-
+let activeCode='';
+function showProduct(code) {
+  const product=products.find(item=>item.code===code);
+  activeCode=code;
+  $('#detail-title').textContent=code;
+  $('#detail-collection').textContent=code.split('-')[0]+' collection';
+  $('#detail-image').src=product.images[0];
+  $('#detail-image').alt=code+' mosaic lamp';
+  $('#detail-whatsapp').href=whatsappURL(code);
+  $('#original-image').href=product.images[0];
+  const visible=cards.filter(card=>!card.hidden).map(card=>card.dataset.code);
+  $('#product-position').textContent=(visible.indexOf(code)+1)+' / '+visible.length;
+}
+document.querySelectorAll('[data-product]').forEach(button=>button.addEventListener('click',()=>{
+  opener=button;showProduct(button.dataset.product);dialog.showModal();document.body.classList.add('modal-open');
+}));
+function stepProduct(direction) {
+  const visible=cards.filter(card=>!card.hidden).map(card=>card.dataset.code);
+  const index=visible.indexOf(activeCode);
+  if(visible.length)showProduct(visible[(index+direction+visible.length)%visible.length]);
+}
+$('#previous-product').addEventListener('click',()=>stepProduct(-1));
+$('#next-product').addEventListener('click',()=>stepProduct(1));
+dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();stepProduct(-1)}if(event.key==='ArrowRight'){event.preventDefault();stepProduct(1)}});
 $(".close-modal").addEventListener("click", () => {
   dialog.close();
 });
